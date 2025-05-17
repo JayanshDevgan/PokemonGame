@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-enum PokemonChoice
+enum class PokemonChoice
 {
 	Bulbasaur,
 	Charmander,
@@ -9,10 +9,19 @@ enum PokemonChoice
 	InvalidChoice
 };
 
+enum class PokemonType
+{
+	Fire,
+	Electric,
+	Water,
+	Earth,
+	Normal
+};
+
 int main()
 {
 	std::string player_name;
-	PokemonChoice chosen_pokemon = InvalidChoice;
+	PokemonChoice chosen_pokemon = PokemonChoice::InvalidChoice;
 
 	std::cout << "Player Name: ";
 	std::cin >> player_name;
@@ -26,38 +35,38 @@ int main()
 	switch (choice)
 	{
 	case 1:
-		chosen_pokemon = Bulbasaur;
+		chosen_pokemon = PokemonChoice::Bulbasaur;
 		break;
 	case 2:
-		chosen_pokemon = Charmander;
+		chosen_pokemon = PokemonChoice::Charmander;
 		break;
 	case 3:
-		chosen_pokemon = Squirtle;
+		chosen_pokemon = PokemonChoice::Squirtle;
 		break;
 	default:
-		chosen_pokemon = InvalidChoice;
+		chosen_pokemon = PokemonChoice::InvalidChoice;
 	}
 
 	switch (chosen_pokemon)
 	{
-	case Bulbasaur:
+	case PokemonChoice::Bulbasaur:
 		std::cout << "Professor Oak: A fiery choice! Charmander is yours!\n";
 		break;
-	case Charmander:
+	case PokemonChoice::Charmander:
 		std::cout << "Professor Oak: A fine choice! Bulbasaur is always ready to grow on you!\n";
 		break;
-	case Squirtle:
+	case PokemonChoice::Squirtle:
 		std::cout << "Professor Oak: Splendid! Squirtle will keep you cool under pressure!\n";
 		break;
 	default:
 		std::cout << "Professor Oak: Hmm, that doesn't seem right. Let me choose for you...\n";
-		chosen_pokemon = Charmander;
+		chosen_pokemon = PokemonChoice::Charmander;
 		std::cout << "Professor Oak: Just kidding! Let's go with Charmander, the fiery dragon in the making!\n";
 		break;
 	}
 
-	std::cout << "Professor Oak: " << (chosen_pokemon == Charmander ? "Charmander" :
-										chosen_pokemon == Bulbasaur ? "Bulbasaur" : "Squirtle")
+	std::cout << "Professor Oak: " << (chosen_pokemon == PokemonChoice::Charmander ? "Charmander" :
+										chosen_pokemon == PokemonChoice::Bulbasaur ? "Bulbasaur" : "Squirtle")
 		<< " and you, " << player_name << ", are going to be the best of friends!\n";
 	std:: cout << "Professor Oak: Your journey begins now! Get ready to explore the vast world of Pokemon!\n";
 
@@ -104,6 +113,16 @@ int main()
 	std::cout << "Will you find riches or danger?" << std::endl;
 	std::cout << "Only time will tell... Choose wisely, adventurer, for once you step inside," << std::endl;
 	std::cout << "there’s no turning back." << std::endl;
+
+
+	std::cout << "Ah! Look at you, Trainer! You’ve come so far, but now… \n"
+		<< "it’s time for a choice that will shape your entire adventure.\n"
+		<< "Before we dive into the mysteries of Pokémon battles,\n"
+		<< "you must know this… In the Pokémon world,\n"
+		<< "we speak a special language called Enums.\n"
+		<< "It’s what helps us keep things in order!\n"
+		<< "Think of it like a magical scroll where each Pokémon has a unique spot—no mix-ups, no confusion.\n"
+		<< "That’s why I’ve prepared a special task for you!\n";
 
 	return 0;
 }
