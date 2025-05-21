@@ -1,1 +1,5 @@
 C:\dev\PokemonGame\PokemonGame\main.cpp;C:\dev\PokemonGame\PokemonGame\x64\Debug\main.obj
+C:\dev\PokemonGame\PokemonGame\player.cpp;C:\dev\PokemonGame\PokemonGame\x64\Debug\player.obj
+C:\dev\PokemonGame\PokemonGame\pokemon.cpp;C:\dev\PokemonGame\PokemonGame\x64\Debug\pokemon.obj
+C:\dev\PokemonGame\PokemonGame\professor_oak.cpp;C:\dev\PokemonGame\PokemonGame\x64\Debug\professor_oak.obj
+C:\dev\PokemonGame\PokemonGame\utils.cpp;C:\dev\PokemonGame\PokemonGame\x64\Debug\utils.obj
