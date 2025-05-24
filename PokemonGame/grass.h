@@ -1,6 +1,7 @@
 #pragma once
 
 #include "pokemon.h"
+#include "WildEncounterManager.h"
 
 #include <vector>
 #include <string>

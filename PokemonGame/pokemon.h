@@ -21,6 +21,24 @@ enum class PokemonType
     ELECTRIC
 };
 
+//class WildPokemon
+//{
+//public:
+//    std::string m_name;
+//    PokemonType m_type;
+//    int m_health;
+//
+//    WildPokemon();
+//
+//    WildPokemon(const std::string& p_name, PokemonType p_type, int p_health);
+//
+//    WildPokemon(const WildPokemon& other);
+//
+//    ~WildPokemon();
+//
+//    void attack();
+//};
+
 class Pokemon
 {
 public:

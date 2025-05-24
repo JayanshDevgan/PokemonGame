@@ -1,22 +1,13 @@
 #include "Game.h"
 #include "grass.h"
+#include "player.h"
+#include "WildEncounterManager.h"
+#include "utils.h"
 
 void Game::gameLoop(Player& player)
 {
     int choice;
     bool keepPlaying = true;
-
-    Grass forestGrass = {
-        {{"Pidgey", PokemonType::NORMAL, 40}, {"Caterpie", PokemonType::BUG, 35}},
-        "Forest",
-        70
-    };
-
-    Grass caveGrass = {
-        {{"Zubat", PokemonType::POISON, 30},  {"Geodude", PokemonType::ROCK, 50}},
-        "Cave",
-        80
-    };
 
     while (keepPlaying)
     {
@@ -34,10 +25,12 @@ void Game::gameLoop(Player& player)
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         switch (choice) {
-        case 1:
-            std::cout << "You look around... but all the wild Pokémon are on "
-                "vacation. Maybe try again later?\n";
+        case 1: {
+            WildEncounterManager encounterManager;
+            Pokemon encounteredPokemon = encounterManager.getRandomPokemonFromGrass(forestGrass);
+            std::cout << "A wild " << encounteredPokemon.m_name << " appeared!\n";
             break;
+        }
         case 2:
             std::cout
                 << "You head to the PokeCenter, but Nurse Joy is out on a coffee "
