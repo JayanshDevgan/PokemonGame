@@ -10,12 +10,15 @@ enum class PokemonChoice
 
 enum class PokemonType
 {
+    BUG,
     FIRE,
+    ROCK,
     GRASS,
-    ELECTRIC,
     WATER,
     EARTH,
-    NORMAL
+    NORMAL,
+    POISON,
+    ELECTRIC
 };
 
 class Pokemon
