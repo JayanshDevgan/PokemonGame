@@ -33,17 +33,18 @@ Pokemon::Pokemon() {
 	m_maxHealth = 100;
 }
 
-Pokemon::Pokemon(const std::string& p_name, PokemonType p_type, int p_health, int p_maxHealth) {
+Pokemon::Pokemon(const std::string& p_name, PokemonType p_type, int p_health, int p_maxHealth, int p_attackPower) {
 	m_name = p_name;
 	m_type = p_type;
 	m_health = p_health;
 	m_maxHealth = p_maxHealth;
+	m_attackPower = p_attackPower;
 }
 
 Pokemon::~Pokemon() {}
 
 void Pokemon::attack(Pokemon& target) { 
-	int damage = 10;
+	int damage = m_attackPower;
 	std::cout << m_name << "attacks " << target.m_name << "for " << damage << " damage!" << std::endl;
 	target.TakeDamage(damage);
 }
@@ -54,3 +55,5 @@ void Pokemon::TakeDamage(int damage) {
 }
 
 bool Pokemon::isFainted() const { return m_health <= 0; }
+
+void Pokemon::heal() { m_health = m_maxHealth; }
