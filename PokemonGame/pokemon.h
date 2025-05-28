@@ -45,14 +45,16 @@ public:
     std::string m_name;
     PokemonType m_type;
     int m_health;
+    int m_maxHealth;
 
     Pokemon();
 
-    Pokemon(const std::string& p_name, PokemonType p_type, int p_health);
-
-    Pokemon(const Pokemon& other);
+    Pokemon(const std::string& p_name, PokemonType p_type, int p_health, int p_maxHealth);
 
     ~Pokemon();
 
-    void attack();
+    void attack(Pokemon& target);
+
+    void TakeDamage(int damage);
+    bool isFainted() const;
 };

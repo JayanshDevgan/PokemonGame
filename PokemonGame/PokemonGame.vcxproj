@@ -127,17 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="pokemon.cpp" />
     <ClCompile Include="professor_oak.cpp" />
     <ClCompile Include="utils.cpp" />
+    <ClCompile Include="WildEncounterManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="grass.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="pokemon.h" />
     <ClInclude Include="professor_oak.h" />
     <ClInclude Include="utils.h" />
+    <ClInclude Include="WildEncounterManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
