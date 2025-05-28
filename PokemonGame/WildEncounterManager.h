@@ -14,5 +14,5 @@ public:
 		srand(time(0));
 	}
 
-	WildPokemon getRandomPokemonFromGrass(const Grass& grass);
+	Pokemon getRandomPokemonFromGrass(const Grass& grass);
 };
