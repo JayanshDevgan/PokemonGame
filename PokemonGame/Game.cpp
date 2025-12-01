@@ -32,9 +32,9 @@ void Game::gameLoop(Player& player)
             break;
         }
         case 2:
-            std::cout
-                << "You head to the PokeCenter, but Nurse Joy is out on a coffee "
-                "break. Guess your Pokémon will have to tough it out for now!\n";
+            std::cout << "You head to the PokeCenter." << std::endl;
+            player.getChosenPokemon().heal();
+            std::cout << player.getChosenPokemon().m_name << "'s health is fully restored!\\n";
             break;
         case 3:
             std::cout << "You march up to the Gym, but it's closed for renovations. "

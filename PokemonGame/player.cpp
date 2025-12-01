@@ -22,16 +22,16 @@ void Player::chosenPokemon(int choice)
 	switch ((PokemonChoice)choice)
 	{
 	case PokemonChoice::CHARMANDER:
-		m_chosenPokemon = Pokemon("Charmander", PokemonType::FIRE, 100);
+		m_chosenPokemon = Pokemon("Charmander", PokemonType::FIRE, 100, 100, 10);
 		break;
 	case PokemonChoice::BULBASAUR:
-		m_chosenPokemon = Pokemon("Bulbasaur", PokemonType::GRASS, 100);
+		m_chosenPokemon = Pokemon("Bulbasaur", PokemonType::GRASS, 100, 100, 8);
 		break;
 	case PokemonChoice::SQUIRTLE:
-		m_chosenPokemon = Pokemon("Squirtle", PokemonType::WATER, 100);
+		m_chosenPokemon = Pokemon("Squirtle", PokemonType::WATER, 100, 100, 10);
 		break;
 	default:
-		m_chosenPokemon = Pokemon("Pikachu", PokemonType::ELECTRIC, 100);
+		m_chosenPokemon = Pokemon("Pikachu", PokemonType::ELECTRIC, 100, 100, 12);
 		break;
 	}
 	std::cout << "Player " << m_name << " chose " << m_chosenPokemon.m_name << "!\n";
